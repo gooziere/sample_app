@@ -35,6 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development do
   gem 'rspec-rails', '3.5'
+  
 end
 
 group :test do
