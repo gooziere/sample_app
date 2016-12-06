@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+  
   resources :users
+  resources :sessions, :only =>[:new, :create, :destroy]
+  
   
   get '/signup' => 'users#new'
+  get '/signin' => 'sessions#new'
+  get '/signout' => 'sessions#destroy'  
   get '/contact' => 'pages#contact'
   get '/about' => 'pages#about'
   get '/help' => 'pages#help'
